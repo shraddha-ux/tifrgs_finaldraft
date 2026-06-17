@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Ramanujan House</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f8fa;
+color:#222;
+overflow-x:hidden;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+}
+
+.logo span{
+    font-size:28px;
+    font-weight:800;
+    color:#8B0000;
+}
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#8B0000;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#8B0000;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#f4e2de,#e8c1bb);
+padding:120px 10%;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+color:#444;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:70px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:translateY(-8px);
+}
+
+/* CONTENT */
+
+.container{
+padding:0 10% 80px;
+}
+
+.section-title{
+font-size:2.8rem;
+font-weight:800;
+color:#8B0000;
+text-align:center;
+margin-bottom:40px;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:40px;
+}
+
+.card h3{
+color:#8B0000;
+margin-bottom:15px;
+font-size:1.8rem;
+}
+
+.card p{
+font-size:17px;
+line-height:1.9;
+}
+
+/* CONTACT BOXES */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-bottom:60px;
+}
+
+.info-box{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.info-box:hover{
+transform:translateY(-8px);
+}
+
+.info-box h4{
+font-size:1.4rem;
+margin-bottom:15px;
+color:#8B0000;
+}
+
+.info-box p{
+line-height:1.8;
+}
+
+/* MAP */
+
+.map-card{
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.map-card img{
+width:100%;
+border-radius:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+margin-top:60px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+    <img src="tifr-logo-black-new.png" alt="TIFR Logo">
+    <span>Ramanujan Guest House</span>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="usage-rules.html">Usage Rules</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Contact Us</h1>
+
+<p>
+Ramanujan House is located inside the TIFR Housing Colony on 2, Homi Bhabha Road, opposite the TIFR Main Campus, Navy Nagar, Colaba, Mumbai.
+</p>
+
+</section>
+
+<section class="gallery">
+
+<img src="contact/sb-1alt (1).jpg" alt="Ramanujan House">
+
+<img src="contact/sb-3alt (2).jpg" alt="Garden">
+
+<img src="contact/sb-9.jpg" alt="Campus">
+
+
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">How To Reach Us</h2>
+
+<div class="card">
+
+<p>
+Ramanujan House is located inside the TIFR Housing Colony on Homi Bhabha Road, opposite the TIFR Campus.
+</p>
+
+<br>
+
+<p>
+You can take a taxi and ask the driver to take you to the Navy Nagar Bus Terminus in Colaba.
+</p>
+
+<br>
+
+<p>
+You may also use:
+</p>
+
+<ul style="padding-left:25px;line-height:2;margin-top:10px;">
+<li>Bus No. 3 from CST</li>
+<li>Bus No. 11 from CST</li>
+<li>Bus No. 125 from CST</li>
+<li>Bus No. 137 from Churchgate Station</li>
+</ul>
+
+<br>
+
+<p>
+Get down at the last stop and proceed towards the end of the road where the TIFR Campus is located.
+</p>
+
+</div>
+
+<h2 class="section-title">Contact Information</h2>
+
+<div class="contact-grid">
+
+<div class="info-box">
+<h4>Phone</h4>
+<p>+91-22-2278 3050</p>
+</div>
+
+<div class="info-box">
+<h4>Email</h4>
+<p>guesthouse@tifr.res.in</p>
+</div>
+
+<div class="info-box">
+<h4>Feedback</h4>
+<p>feedback.gh@tifr.res.in</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Feedback</h2>
+
+<div class="card">
+
+<p>
+Your appreciation of our services and your complaints or suggestions motivate us to continuously improve.
+</p>
+
+<br>
+
+<p>
+Please write to us at:
+<strong>feedback.gh@tifr.res.in</strong>
+</p>
+
+<br>
+
+<p>
+You may also fill out the feedback form available at the Front Desk.
+</p>
+
+</div>
+
+<h2 class="section-title">Location</h2>
+
+<div class="card">
+
+<p>
+The Ramanujan Guesthouse is located inside the TIFR Housing Colony adjacent to the TIFR Main Campus on Homi Bhabha Road, Navy Nagar, Colaba, Mumbai.
+</p>
+
+</div>
+
+<div class="map-card">
+
+<img src="contact/tifr_sagarika.jpg" alt="Location Map">
+
+</div>
+
+</div>
+
+<footer>
+
+© Guesthouse TIFR
+
+</footer>
+
+</body>
+</html>

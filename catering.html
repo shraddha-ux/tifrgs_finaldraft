@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catering Services | Ramanujan House</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
+}
+
+body{
+background:#f7f8fa;
+color:#222;
+}
+
+/* NAVBAR */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+}
+
+.logo span{
+    font-size:28px;
+    font-weight:800;
+    color:#8B0000;
+}
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#8B0000;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+nav a:hover{
+color:#8B0000;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#f4e2de,#e8c1bb);
+padding:120px 10%;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+}
+
+/* SECTIONS */
+
+.container{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+font-weight:800;
+color:#8B0000;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-bottom:70px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.3s;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.gallery img:hover{
+transform:translateY(-8px);
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:50px;
+}
+
+.card h3{
+color:#8B0000;
+margin-bottom:20px;
+font-size:2rem;
+}
+
+.card ul{
+padding-left:25px;
+line-height:2;
+}
+
+/* CANTEENS */
+
+.canteens{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.canteen{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.canteen:hover{
+transform:translateY(-8px);
+}
+
+.canteen img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.canteen-content{
+padding:25px;
+}
+
+.canteen-content h4{
+margin-bottom:15px;
+color:#8B0000;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+<div class="logo">
+    <img src="tifr-logo-black-new.png" alt="TIFR Logo">
+    <span>Ramanujan Guest House</span>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="people.html">People</a></li>
+<li><a href="catering.html">Catering</a></li>
+<li><a href="usage-rules.html">Usage Rules</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Catering Services</h1>
+
+<p>
+The Colaba campus of TIFR has several eateries which collectively provide services from 8:00 AM to 2:00 AM for staff, residents and guests. In addition, the guesthouse provides breakfast and dinner services in the in-house dining hall at Ramanujan House.
+</p>
+
+</section>
+
+<div class="container">
+
+<div class="gallery">
+
+<img src="catering/image1.jpg">
+<img src="catering/image2.jpg">
+<img src="catering/image3.jpg">
+<img src="catering/gh_038.jpg">
+<img src="catering/gh_053.jpg">
+
+</div>
+
+<h2 class="section-title">Ramanujan Cafeteria</h2>
+
+<div class="card">
+
+<h3>Dining Hall Services</h3>
+
+<ul>
+<li>Breakfast: 8.00 AM – 10.00 AM (included in room rent)</li>
+<li>Lunch is not provided in the Guesthouse Cafeteria</li>
+<li>Dinner: 8.00 PM – 9.30 PM</li>
+<li>Prior request required before 6.30 PM</li>
+<li>Vegetarian Dinner: ₹100</li>
+<li>Non-Vegetarian Dinner: ₹125</li>
+</ul>
+
+</div>
+
+<h2 class="section-title">Other Eateries in TIFR Campus</h2>
+
+<div class="canteens">
+
+<div class="canteen">
+
+<img src="catering/west-can.jpg">
+
+<div class="canteen-content">
+
+<h4>West Canteen</h4>
+
+<p>
+Main Building Ground Floor
+</p>
+
+<p>
+Breakfast, beverages & snacks:
+8.15 AM – 12.00 PM
+</p>
+
+<p>
+Lunch:
+12.15 PM – 2.15 PM
+</p>
+
+<p>
+Tea & Snacks:
+3.30 PM – 6.00 PM
+</p>
+
+</div>
+
+</div>
+
+<div class="canteen">
+
+<img src="catering/east-can.jpg">
+
+<div class="canteen-content">
+
+<h4>East Canteen</h4>
+
+<p>
+Breakfast:
+7.30 AM – 8.00 AM &
+9.30 AM – 10.00 AM
+</p>
+
+<p>
+Lunch:
+12.00 PM – 2.00 PM
+</p>
+
+<p>
+Tea & Snacks:
+3.30 PM – 4.15 PM
+</p>
+
+<p>
+Dinner:
+7.00 PM – 8.30 PM
+</p>
+
+</div>
+
+</div>
+
+<div class="canteen">
+
+<img src="catering/jagdish.jpg">
+
+<div class="canteen-content">
+
+<h4>Jagdish Canteen</h4>
+
+<p>
+Ground Floor, Jagdish House
+</p>
+
+<p>
+Extension: 2155
+</p>
+
+<p>
+Open:
+8.00 AM – 1.45 AM
+</p>
+
+<p>
+Food, beverages and snacks available throughout the day.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© Guesthouse TIFR
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ramanujan House | TIFR Guesthouse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f8fa;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 35px;
+
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:900;
+color:#8B0000;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#8B0000;
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(
+135deg,
+#f4e2de,
+#e8c1bb
+);
+
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:140px 5% 0;
+}
+
+.hero h1{
+font-size:clamp(4rem,8vw,8rem);
+font-weight:900;
+line-height:.95;
+letter-spacing:-3px;
+color:#111;
+}
+
+.hero p{
+max-width:850px;
+margin-top:25px;
+
+font-size:1.3rem;
+line-height:1.8;
+
+color:#444;
+}
+
+.hero-btn{
+display:inline-block;
+
+margin-top:35px;
+
+background:#111;
+color:white;
+
+padding:18px 42px;
+
+border-radius:60px;
+
+text-decoration:none;
+font-weight:700;
+
+transition:.4s;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.15);
+}
+
+.hero-btn:hover{
+background:#8B0000;
+transform:translateY(-5px);
+}
+
+/* SLIDER */
+
+.slider{
+position:relative;
+height:700px;
+width:100%;
+
+margin-top:70px;
+
+overflow:hidden;
+
+border-radius:30px 30px 0 0;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SECTION */
+
+section{
+padding:120px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:3rem;
+font-weight:800;
+margin-bottom:70px;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+
+position:absolute;
+left:50%;
+bottom:-15px;
+
+transform:translateX(-50%);
+
+width:80px;
+height:5px;
+
+background:#8B0000;
+border-radius:20px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.12);
+}
+
+.about p{
+font-size:18px;
+line-height:1.9;
+color:#444;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+padding:90px 10%;
+background:#f7f8fa;
+}
+
+.stats div{
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+}
+
+.stats h2{
+font-size:60px;
+color:#8B0000;
+}
+
+/* ROOMS */
+
+.rooms{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.room{
+background:white;
+
+border-radius:25px;
+overflow:hidden;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+}
+
+.room:hover{
+transform:
+translateY(-12px)
+scale(1.02);
+}
+
+.room img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.6s;
+}
+
+.room:hover img{
+transform:scale(1.08);
+}
+
+.room-content{
+padding:30px;
+}
+
+.room-content h3{
+font-size:1.8rem;
+margin-bottom:10px;
+}
+
+/* FACILITIES */
+
+.facilities{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.facility{
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.07);
+
+transition:.3s;
+}
+
+.facility:hover{
+transform:translateY(-8px);
+}
+
+.facility h4{
+margin-bottom:12px;
+color:#8B0000;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+}
+
+.logo span{
+    font-size:28px;
+    font-weight:800;
+    color:#8B0000;
+}
+/* TABLE */
+
+table{
+width:100%;
+background:white;
+
+border-collapse:collapse;
+
+border-radius:20px;
+overflow:hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+th{
+background:#8B0000;
+color:white;
+padding:20px;
+}
+
+td{
+padding:18px;
+border-bottom:1px solid #eee;
+}
+
+tr:hover{
+background:#faf4f4;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.15);
+}
+
+/* CONTACT */
+
+.contact{
+background:
+linear-gradient(
+135deg,
+#111,
+#222
+);
+
+color:white;
+
+padding:100px 10%;
+
+text-align:center;
+
+border-radius:40px 40px 0 0;
+}
+
+.contact h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+
+padding:30px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+@media(max-width:600px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+.slider{
+height:400px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">
+    <img src="tifr-logo-black-new.png" alt="TIFR Logo">
+    <span>Ramanujan Guest House</span>
+</div>
+
+<ul>
+<li><a href="https://www.tifr.res.in">TIFR Home</a></li>
+<li><a href="#about">About</a></li>
+
+<li><a href="people.html">People</a></li>
+<li><a href="catering.html">catering</a></li>
+<li><a href="usage_rules.html">Usage rules</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+r
+<h1>Welcome to<br>Ramanujan House</h1>
+
+<p>
+The TIFR Guesthouse building in the Colaba Campus is named after the great Indian mathematician Srinivasa Ramanujan.
+</p>
+
+<a href="#about" class="hero-btn">Explore More</a>
+
+<div class="slider">
+
+<div class="slide active">
+<img src="About/Image 1.jpg">
+</div>
+
+<div class="slide">
+<img src="About/Image 5.jpg">
+</div>
+
+<div class="slide">
+<img src="About/Image 6.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Ramanujan House</h2>
+
+<div class="about">
+
+<img src="About/Image 2.jpg">
+
+<div>
+
+<p>
+The TIFR Guesthouse building in the Colaba Campus is named after the great Indian mathematician Srinivasa Ramanujan.
+</p>
+
+<br>
+
+<p>
+It consists of three different categories of rooms. In addition, the facility provides fully furnished and serviced studios and two-bedroom apartments on campus for long-term guests.
+</p>
+
+<br>
+
+<p>
+Rooms can be booked online using TIFR Datanet by authorized members. For all others, booking requests should be sent to:
+<strong>guesthouse@tifr.res.in</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="stats">
+
+<div>
+<h2>3</h2>
+<p>Room Types</p>
+</div>
+
+<div>
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>WiFi Coverage</p>
+</div>
+
+<div>
+<h2>TIFR</h2>
+<p>Official Guesthouse</p>
+</div>
+
+</div>
+
+<section id="rooms">
+
+<h2 class="section-title">Accommodation</h2>
+
+<div class="rooms">
+
+<div class="room">
+<img src="About/Image 11.jpg">
+<div class="room-content">
+<h3>A-Type Room</h3>
+<p>Single room with one bed and shared bathroom & toilet.</p>
+</div>
+</div>
+
+<div class="room">
+<img src="About/Image 10.jpg">
+<div class="room-content">
+<h3>C-Type Room</h3>
+<p>Single room with two beds and attached bathroom & toilet.</p>
+</div>
+</div>
+
+<div class="room">
+<img src="About/Image 8.jpg">
+<div class="room-content">
+<h3>D-Type Room</h3>
+<p>Two beds with attached bathroom, kitchenette, hall and living area.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facilities">
+
+<div class="facility">
+<h4>Air Conditioning</h4>
+<p>All rooms are air conditioned.</p>
+</div>
+
+<div class="facility">
+<h4>Free WiFi</h4>
+<p>High-speed internet access throughout the guesthouse.</p>
+</div>
+
+<div class="facility">
+<h4>Refrigerator</h4>
+<p>Available in every room.</p>
+</div>
+
+<div class="facility">
+<h4>Locker Facility</h4>
+<p>Secure personal storage.</p>
+</div>
+
+<div class="facility">
+<h4>Tea & Coffee</h4>
+<p>Complimentary tea, coffee and kettle.</p>
+</div>
+
+<div class="facility">
+<h4>Mineral Water</h4>
+<p>One complimentary bottle every day.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="tariff">
+
+<h2 class="section-title">Tariff & Timings</h2>
+
+<table>
+
+<tr>
+<th>Room Type</th>
+<th>Official</th>
+<th>Personal</th>
+</tr>
+
+<tr>
+<td>A-Type (Single)</td>
+<td>₹200</td>
+<td>₹600</td>
+</tr>
+
+<tr>
+<td>C-Type (Single)</td>
+<td>₹500</td>
+<td>₹1500</td>
+</tr>
+
+<tr>
+<td>C-Type (Double)</td>
+<td>₹650</td>
+<td>₹1950</td>
+</tr>
+
+<tr>
+<td>D-Type (Single)</td>
+<td>₹650</td>
+<td>₹1950</td>
+</tr>
+
+<tr>
+<td>D-Type (Double)</td>
+<td>₹900</td>
+<td>₹2700</td>
+</tr>
+
+<tr>
+<td>D-Type (Family)</td>
+<td>₹1200</td>
+<td>₹3600</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<h3>Check-In Time : 12:00 Noon</h3>
+<h3>Check-Out Time : 10:00 AM</h3>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="About/Image 7.jpg">
+<img src="About/Image 13.jpg">
+<img src="About/Image 9.jpg">
+<img src="About/Image 10.jpg">
+<img src="About/Image 11.jpg">
+<img src="About/Image 12.jpg">
+<img src="About/Image 6.jpg">
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>Ramanujan House – TIFR Guesthouse</p>
+
+<p>Colaba Campus, Mumbai</p>
+
+<p>Email: guesthouse@tifr.res.in</p>
+
+</section>
+
+<footer>
+
+© 2026 Ramanujan House | Tata Institute of Fundamental Research
+
+</footer>
+
+<script>
+
+let slides=document.querySelectorAll('.slide');
+let current=0;
+
+setInterval(()=>{
+
+slides[current].classList.remove('active');
+
+current++;
+
+if(current>=slides.length){
+current=0;
+}
+
+slides[current].classList.add('active');
+
+},4000);
+
+</script>
+
+</body>
+</html>
